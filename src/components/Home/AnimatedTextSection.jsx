@@ -1,109 +1,92 @@
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform, animate } from "framer-motion";
 
-const words = [
-  "Future",
-  "Innovation",
-  "Technology",
-  "Experiences",
-];
+export default function InfiniteAnimatedText() {
+  const ref=useRef(null);
 
-const AnimatedTextSection = () => {
-  const [index, setIndex] = useState(0);
+  // mouse values
+  const mouseX=useMotionValue(0);
+  const mouseY=useMotionValue(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
-    }, 2500);
+  const springX=useSpring(mouseX, { stiffness: 80, damping: 20 });
+  const springY=useSpring(mouseY, { stiffness: 80, damping: 20 });
 
-    return () => clearInterval(interval);
-  }, []);
+  // tilt effect
+  const rotateX=useTransform(springY, [-300, 300], [20, -20]);
+  const rotateY=useTransform(springX, [-300, 300], [-20, 20]);
+
+  // subtle infinite floating animation
+  const yFloat=useMotionValue(0);
+
+  animate(yFloat, [0, -20, 0], {
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  });
+
+  const handleMouseMove=(e) => {
+    const rect=ref.current.getBoundingClientRect();
+
+    const x=e.clientX-rect.left-rect.width/2;
+    const y=e.clientY-rect.top-rect.height/2;
+
+    mouseX.set(x);
+    mouseY.set(y);
+  };
 
   return (
-    <section className="relative bg-black py-40 overflow-hidden">
+    <section className="h-screen flex items-center justify-center bg-[#0b0c0f] overflow-hidden relative">
 
-      {/* Glow */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[900px] h-[900px] bg-purple-500/10 blur-[180px] rounded-full"></div>
-      </div>
 
-      <div className="relative z-10 flex justify-center items-center">
+      {/* glow background */}
+      <div className="absolute top-[200px] left-[-120px] h-[420px] w-[420px] bg-purple-600/10 blur-[140px] rounded-full" />
+      <div className="absolute bottom-[200px] right-[-120px] h-[450px] w-[450px] bg-pink-600/10 blur-[160px] rounded-full" />
 
-        <h1
-          className="
-            text-5xl
-            md:text-[96px]
-            font-semibold
-            tracking-tight
-            leading-none
-            flex
-            items-center
-            gap-6
-            text-white
-          "
+      <motion.h1
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        style={{
+          rotateX,
+          rotateY,
+          y: yFloat,
+        }}
+        className="
+                    text-center
+                    text-5xl
+                    md:text-8xl
+                    font-semibold
+                    leading-[1]
+                    tracking-tight
+                    text-white
+                    cursor-pointer
+                    perspective-[1200px]
+                "
+      >
+
+        <span className="block opacity-90">
+          Empowering
+        </span>
+
+        <motion.span
+          className="block text-purple-400"
+          animate={{
+            letterSpacing: ["0em", "0.05em", "0em"],
+            scale: [1, 1.03, 1],
+            opacity: [0.9, 1, 0.9],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
+          Future Ready Digital Solutions
+        </motion.span>
 
-          {/* Empowering */}
-          <motion.span
-            initial={{
-              opacity: 0,
-              y: 40,
-              filter: "blur(12px)",
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              filter: "blur(0px)",
-            }}
-            transition={{
-              duration: 1.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="inline-block"
-          >
-            Empowering
-          </motion.span>
+      </motion.h1>
 
-          {/* Changing Word */}
-          <span className="relative h-[110px] min-w-[520px] overflow-hidden text-purple-400">
 
-            <AnimatePresence mode="wait">
 
-              <motion.span
-                key={words[index]}
-                initial={{
-                  opacity: 0,
-                  y: 60,
-                  filter: "blur(10px)",
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                }}
-                exit={{
-                  opacity: 0,
-                  y: -60,
-                  filter: "blur(10px)",
-                }}
-                transition={{
-                  duration: 0.9,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="absolute left-0 top-0"
-              >
-                {words[index]}
-              </motion.span>
-
-            </AnimatePresence>
-
-          </span>
-
-        </h1>
-
-      </div>
     </section>
   );
-};
-
-export default AnimatedTextSection;
+}

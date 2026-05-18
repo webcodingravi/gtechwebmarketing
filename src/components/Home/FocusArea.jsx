@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
 
 const focusAreas=[
@@ -6,108 +6,101 @@ const focusAreas=[
         number: "01",
         title: "Insightful Integrations & Data-Driven Application Ecosystem",
         description:
-            "We develop CRM, web, and mobile applications, seamlessly integrating real-time data insights with advanced API connectivity and interoperability. This agile, unified digital experience enriches every customer interaction, fostering seamless and meaningful engagement across platforms.uilding scalable digital ecosystems with modern technologies and future-ready architecture.",
+            "We develop CRM, web, and mobile applications, seamlessly integrating real-time data insights with advanced API connectivity and interoperability.",
     },
     {
         number: "02",
         title: "AI-Driven Marketing Automation & Consumer Engagement",
         description:
-            "We harness the power of AI to automate marketing, personalize customer interactions, and boost engagement. Our offerings include smart chatbots, targeted campaigns, and real-time sentiment analysis to foster deeper customer connections and drive conversions.",
+            "We use AI to automate marketing, personalize interactions, and improve conversions through smart workflows and real-time insights.",
     },
     {
         number: "03",
         title: "Omnichannel Consumer Engagement & Operations",
         description:
-            "We streamline consumer promotions, manage offer redemptions, and provide end-to-end support for BPO and call center operations. From payment services to comprehensive promotion management, we build seamless solutions to ensure an exceptional customer experience.",
+            "We manage end-to-end customer journeys across platforms, including promotions, payments, and support systems.",
     },
-
-     {
+    {
         number: "04",
-        title: "Omnichannel Consumer Engagement & Operations",
+        title: "Scalable Digital Growth Systems",
         description:
-            "We streamline consumer promotions, manage offer redemptions, and provide end-to-end support for BPO and call center operations. From payment services to comprehensive promotion management, we build seamless solutions to ensure an exceptional customer experience.",
-    }
+            "We build scalable systems designed for performance, automation, and long-term digital growth.",
+    },
 ];
 
 const FocusArea=() => {
-
     return (
-        <>
-            <section className="bg-black text-white py-32 px-6 md:px-16 overflow-hidden">
+        <section className="relative bg-[#0b0c0f] text-white py-28 px-6 md:px-16 overflow-hidden">
 
-                {/* Top Heading */}
-                <motion.div
-                    initial={{ opacity: 0, y: 80 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
-                    className="max-w-7xl mx-auto text-center"
-                >
+            {/* glow background */}
+            <div className="absolute top-[-200px] left-[-120px] h-[420px] w-[420px] bg-purple-600/10 blur-[140px] rounded-full" />
+            <div className="absolute bottom-[200px] right-[-120px] h-[450px] w-[450px] bg-pink-600/10 blur-[160px] rounded-full" />
 
-                    <h2 className="uppercase tracking-[4px] text-purple-400 mb-1 text-[30px] md:text-[40px] font-bold">
-                        Our Focus Areas
-                    </h2>
+            {/* heading */}
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="max-w-4xl mx-auto text-center mb-20"
+            >
 
-                    <p className="md:text-xl text-md text-gray-400 w-full max-w-3xl mx-auto">
-                        We empower brands to transform customer experience through the strategic application of technology, data-driven insights, and AI.
-                    </p>
 
-                </motion.div>
+                <p className="text-2xl font-semibold text-purple-400 tracking-wide md:text-5xl">
+                    Our Focus Areas
+                </p>
 
-                {/* Focus Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24 md:px-38 mx-auto">
-                    {focusAreas.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 60 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                duration: 0.8,
-                                delay: index*0.2,
-                            }}
-                            viewport={{ once: true }}
-                            whileHover={{
-                                y: -8,
-                            }}
-                            className="
-              group
-              relative
-              p-10
-              rounded-3xl
-              border
-              border-white/10
-              bg-white/5
-              backdrop-blur-xl
-              overflow-hidden
-            "
-                        >
 
-                            {/* Hover Gradient */}
-                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
 
-                            {/* Number */}
-                            <div className="relative z-10 text-6xl font-bold text-white/10 mb-8">
-                                {item.number}
-                            </div>
+                <p className="mt-2 text-gray-400 text-lg md:text-md max-w-2xl mx-auto">
+                    We combine strategy, technology and automation to build scalable digital ecosystems that drive real business outcomes.
+                </p>
+            </motion.div>
 
-                            {/* Title */}
-                            <h3 className="relative z-10 text-3xl font-semibold mb-5">
-                                {item.title}
-                            </h3>
+            {/* cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-16 lg:px-32">
 
-                            {/* Description */}
-                            <p className="relative z-10 text-gray-400 leading-relaxed text-lg">
-                                {item.description}
-                            </p>
+                {focusAreas.map((item, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 40, scale: 0.98 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{
+                            duration: 0.7,
+                            delay: index*0.1,
+                        }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -8 }}
+                        className="relative group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 overflow-hidden"
+                    >
 
-                        </motion.div>
-                    ))}
+                        {/* hover glow */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-purple-500/10 to-pink-500/10" />
 
-                </div>
-            </section>
+                        {/* number */}
+                        <div className="relative z-10 text-5xl font-bold text-white/10 mb-6 group-hover:text-white/20 transition">
+                            {item.number}
+                        </div>
 
-        </>
-    )
-}
+                        {/* title */}
+                        <h3 className="relative z-10 text-2xl md:text-3xl font-semibold leading-snug group-hover:text-purple-300 transition">
+                            {item.title}
+                        </h3>
 
-export default FocusArea
+                        {/* description */}
+                        <p className="relative z-10 mt-4 text-gray-400 leading-relaxed">
+                            {item.description}
+                        </p>
+
+                        {/* bottom line animation */}
+                        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-purple-500 group-hover:w-full transition-all duration-500" />
+
+                    </motion.div>
+                ))}
+
+            </div>
+        </section>
+    );
+};
+
+export default FocusArea;

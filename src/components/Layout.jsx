@@ -34,19 +34,14 @@ const Layout=() => {
     return (
         <>
             <div className="min-h-screen bg-slate-50 text-slate-900">
-                <header className="sticky top-0 z-50 border-b border-white/10 bg-white backdrop-blur-xl">
-                    <div className="mx-auto flex  items-center justify-between px-5 py-1 md:px-53">
+                <header className="sticky top-0 z-50 border-b border-white/10 bg-white backdrop-blur-xl shadow-md">
+                    <div className="mx-auto flex  items-center justify-between px-5 py-2 md:px-53">
 
                         {/* LOGO */}
                         <Link to="/">
-                          <img src="/assets/gtech logo.png" alt="Logo" className="h-8 md:h-14" />
+                            <img src="/assets/gtech logo.png" alt="Logo" className="h-8 md:h-18" />
                         </Link>
-                        <a
-                            href="#"
-                            className="text-sm md:text-lg font-semibold tracking-[0.35em] text-black/80 uppercase"
-                        >
-                            {/* HASHCONNECT */}
-                        </a>
+
 
                         {/* DESKTOP MENU */}
                         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-black/80">
@@ -58,7 +53,7 @@ const Layout=() => {
                                         className={({ isActive }) =>
                                             `relative group transition ${isActive
                                                 ? "text-black font-semibold"
-                                                :"text-black/60 hover:text-black font-bold hover:translate-x-1"
+                                                :"text-black/60 hover:text-black hover:translate-x-1"
                                             }`
                                         }
                                     >
