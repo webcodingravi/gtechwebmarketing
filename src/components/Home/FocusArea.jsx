@@ -48,7 +48,7 @@ const FocusArea=() => {
                         Our Focus Areas
                     </h2>
 
-                    <p className="md:text-4xl text-md text-gray-400 w-full max-w-3xl mx-auto">
+                    <p className="md:text-xl text-md text-gray-400 w-full max-w-3xl mx-auto">
                         We empower brands to transform customer experience through the strategic application of technology, data-driven insights, and AI.
                     </p>
 
