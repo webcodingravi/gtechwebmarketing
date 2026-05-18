@@ -33,19 +33,19 @@ function WorkCard({ project, index }) {
                     />
 
                     {/* DARK OVERLAY (SOLID) */}
-                    <div className="absolute inset-0 bg-black/60" />
+                    <div className="absolute inset-0 bg-black/70" />
 
                     {/* TEXT */}
-                    <div className="absolute bottom-12 left-10 z-20 text-white max-w-xl">
+                    <div className="absolute bottom-12 left-10 z-20 text-white max-w-xl bg-black/50 p-6 rounded-lg">
                         <p className="text-sm uppercase tracking-widest opacity-70">
                             {project.category}
                         </p>
 
-                        <h2 className="text-3xl md:text-5xl font-semibold mt-3">
+                        <h2 className="text-3xl md:text-5xl font-bold mt-3">
                             {project.title}
                         </h2>
 
-                        <p className="mt-4 text-white/80 ">
+                        <p className="mt-4 text-white/80 font-light leading-relaxed text-xl">
                             {project.intro}
                         </p>
                     </div>

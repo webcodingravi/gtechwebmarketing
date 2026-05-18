@@ -79,8 +79,8 @@ const FooterSection=() => {
                         {/* ABOUT */}
                          <div>
 
-                            <p className="text-white/60 leading-8 text-lg font-light">
-                              <img src="./assets/white logo (2).png" alt="logo" className='h-25 mb-6'/>
+                            <p className="text-white/60 leading-8 text-xl font-light">
+                              {/* <img src="./assets/white logo (2).png" alt="logo" className='h-25 mb-6'/> */}
                               G Tech is a leading web marketing agency setting growth marks in the world of communication. With the time and requirements, we have opted different level of strategic skills to help our clients & brands to optimize their engagements and value their efforts with minimum ROI.
                             </p>
 
@@ -103,7 +103,7 @@ const FooterSection=() => {
                         {/* MENU */}
 
                         <div className="space-y-5">
-                            <p className="text-sm uppercase tracking-[3px] text-white/40 mb-4">
+                            <p className="text-xl uppercase tracking-[3px] text-white/40 mb-4">
                                 Quick Links
                             </p>
                             {footerLinks.map(([title, link], index) => (
@@ -113,7 +113,7 @@ const FooterSection=() => {
                                 >
                                     <Link
                                         to={link}
-                                        className="block text-[16px] text-[#f2f2f2] font-extralight transition-all duration-300"
+                                        className="block text-xl text-[#f2f2f2] font-extralight transition-all duration-300"
                                     >
                                         {title}
                                     </Link>
@@ -127,20 +127,20 @@ const FooterSection=() => {
 
                         {/* CONTACT */}
                         <div className="space-y-3 flex flex-col gap-2">
-                            <p className="text-sm uppercase tracking-[3px] text-white/40">
+                            <p className="text-xl uppercase tracking-[3px] text-white/40">
                                 Contact Information
                             </p>
 
-                         <p className="text-[16px] font-light text-white/90 inline-flex gap-1 items-center">
-                         <FaPhoneVolume />  +91-9810699052
+                         <p className="text-xl font-light text-white/90 inline-flex gap-1 items-center">
+                         <FaPhoneVolume size={19} />  +91-9810699052
                             </p>
 
-                            <p className="text-[16px] font-light text-white/90  inline-flex gap-2">
-                           <Mail size={19} />info@gtechwebmarketing.com
+                            <p className="text-xl font-light text-white/90  inline-flex gap-2">
+                           <Mail size={23} />info@gtechwebmarketing.com
                             </p>
 
-                            <p className="text-[16px] font-light text-white/90 inline-flex gap-2">
-                           <MapPinHouse />
+                            <p className="text-xl font-light text-white/90 inline-flex gap-2">
+                           <MapPinHouse size={47} />
                                A - 19A, 3rd Floor, Mayapuri Industrial Area, Phase - II, New Delhi 110064, INDIA
                             </p>
                         </div>

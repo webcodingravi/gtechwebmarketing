@@ -31,7 +31,15 @@ const OfferingsSection=() => {
                         viewport={{ once: true }}
                         className="mb-24"
                     >
-                        <p className="uppercase tracking-[5px] text-purple-400 mb-5">
+
+                        <h2 className="uppercase tracking-[4px] text-purple-400 mb-1 md:text-[40px] font-bold">
+                       Our Offerings
+                    </h2>
+
+                    <p className="text-4xl text-xl text-gray-400 w-full max-w-3xl mx-auto">
+Intelligent Digital <span className=" text-purple-400">Solutions For Brands                </span>    </p>
+
+                        {/* <p className="uppercase tracking-[5px] text-purple-400 mb-5">
                             Our Offerings
                         </p>
 
@@ -48,7 +56,7 @@ const OfferingsSection=() => {
                         >
                             Intelligent Digital <span className=" text-purple-400">Solutions For Brands
                             </span>
-                        </h2>
+                        </h2> */}
                     </motion.div>
 
                     {/* Offerings List */}

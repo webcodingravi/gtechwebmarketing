@@ -44,13 +44,13 @@ const FocusArea=() => {
                     className="max-w-7xl mx-auto text-center"
                 >
 
-                    <p className="uppercase tracking-[4px] text-purple-400 mb-6">
+                    <h2 className="uppercase tracking-[4px] text-purple-400 mb-1 md:text-[40px] font-bold">
                         Our Focus Areas
-                    </p>
-
-                    <h2 className="text-4xl md:text-5xl font-bold leading-tight w-full">
-                        We empower brands to transform customer experience through the strategic application of technology, data-driven insights, and AI.
                     </h2>
+
+                    <p className="text-4xl text-xl text-gray-400 w-full max-w-3xl mx-auto">
+                        We empower brands to transform customer experience through the strategic application of technology, data-driven insights, and AI.
+                    </p>
 
                 </motion.div>
 

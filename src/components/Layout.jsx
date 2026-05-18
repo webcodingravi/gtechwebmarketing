@@ -58,7 +58,7 @@ const Layout=() => {
                                         className={({ isActive }) =>
                                             `relative group transition ${isActive
                                                 ? "text-black font-semibold"
-                                                :"text-black/60 hover:text-black"
+                                                :"text-black/60 hover:text-black font-bold hover:translate-x-1"
                                             }`
                                         }
                                     >
