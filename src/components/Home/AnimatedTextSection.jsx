@@ -1,91 +1,109 @@
-import React from 'react'
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
+const words = [
+  "Future",
+  "Innovation",
+  "Technology",
+  "Experiences",
+];
 
+const AnimatedTextSection = () => {
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2500);
 
-const AnimatedTextSection=() => {
-    return (
-        <>
+    return () => clearInterval(interval);
+  }, []);
 
-            <section className="relative bg-black py-32 overflow-hidden">
+  return (
+    <section className="relative bg-black py-40 overflow-hidden">
 
-                {/* Background Glow */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[900px] h-[900px] bg-purple-500/10 blur-[180px] rounded-full"></div>
-                </div>
+      {/* Glow */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-[900px] h-[900px] bg-purple-500/10 blur-[180px] rounded-full"></div>
+      </div>
 
-                <div className="relative z-10">
+      <div className="relative z-10 flex justify-center items-center">
 
-                    {/* Infinite Moving Text */}
-                    <div className="overflow-hidden whitespace-nowrap">
+        <h1
+          className="
+            text-5xl
+            md:text-[96px]
+            font-semibold
+            tracking-tight
+            leading-none
+            flex
+            items-center
+            gap-6
+            text-white
+          "
+        >
 
-                        <motion.div
-                            animate={{
-                                x: ["0%", "-100%"],
-                            }}
-                            transition={{
-                                repeat: Infinity,
-                                repeatType: "loop",
-                                duration: 20,
-                                ease: "linear",
-                            }}
-                            className="flex"
-                        >
+          {/* Empowering */}
+          <motion.span
+            initial={{
+              opacity: 0,
+              y: 40,
+              filter: "blur(12px)",
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
+            transition={{
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="inline-block"
+          >
+            Empowering
+          </motion.span>
 
-                            {/* Duplicate Text for Infinite Loop */}
-                            {[...Array(2)].map((_, i) => (
-                                <div
-                                    key={i}
-                                    className="
-                  flex
-                  items-center
-                  gap-16
-                  pr-16
-                  shrink-0
-                "
-                                >
-                                    <h1 className="
-    text-4xl
-    md:text-[120px]
-  
-    font-bold
-    tracking-tight
-    leading-[1.05]
-    text-white
-">
-                                        Empowering The Future
-                                    </h1>
-                                    {/* <h1 className="
-    text-4xl
-    md:text-6xl
-    xl:text-7xl
-    font-bold
-    tracking-tight
-    leading-[1.05]
-    pb-4
-    bg-gradient-to-r
-    from-purple-400
-    via-pink-500
-    to-purple-400
-    bg-clip-text
-    text-transparent
-">
-                                        Digital Experiences
-                                    </h1> */}
-                                </div>
-                            ))}
+          {/* Changing Word */}
+          <span className="relative h-[110px] min-w-[520px] overflow-hidden text-purple-400">
 
-                        </motion.div>
+            <AnimatePresence mode="wait">
 
-                    </div>
+              <motion.span
+                key={words[index]}
+                initial={{
+                  opacity: 0,
+                  y: 60,
+                  filter: "blur(10px)",
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  filter: "blur(0px)",
+                }}
+                exit={{
+                  opacity: 0,
+                  y: -60,
+                  filter: "blur(10px)",
+                }}
+                transition={{
+                  duration: 0.9,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="absolute left-0 top-0"
+              >
+                {words[index]}
+              </motion.span>
 
+            </AnimatePresence>
 
+          </span>
 
-                </div>
-            </section>
-        </>
-    )
-}
+        </h1>
 
-export default AnimatedTextSection
+      </div>
+    </section>
+  );
+};
+
+export default AnimatedTextSection;

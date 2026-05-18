@@ -45,7 +45,7 @@ function WorkCard({ project, index }) {
                             {project.title}
                         </h2>
 
-                        <p className="mt-4 text-white/80">
+                        <p className="mt-4 text-white/80 ">
                             {project.intro}
                         </p>
                     </div>
