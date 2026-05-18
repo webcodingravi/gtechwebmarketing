@@ -36,16 +36,16 @@ function WorkCard({ project, index }) {
                     <div className="absolute inset-0 bg-black/70" />
 
                     {/* TEXT */}
-                    <div className="absolute bottom-12 left-10 z-20 text-white max-w-xl bg-black/50 p-6 rounded-lg">
-                        <p className="text-sm uppercase tracking-widest opacity-70">
+                    <div className="absolute md:bottom-12 left-10 z-20 text-white max-w-xl bg-black/50 p-6 rounded-lg">
+                        <p className="md:text-sm uppercase tracking-widest opacity-70 text-[10px]">
                             {project.category}
                         </p>
 
-                        <h2 className="text-3xl md:text-5xl font-bold mt-3">
+                        <h2 className="text-3xl md:text-5xl font-bold mt-3 text-sm">
                             {project.title}
                         </h2>
 
-                        <p className="mt-4 text-white/60 font-light leading-relaxed text-xl">
+                        <p className="mt-4 text-white/60 font-light leading-relaxed md:text-xl text-sm">
                             {project.intro}
                         </p>
                     </div>

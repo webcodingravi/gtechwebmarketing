@@ -20,13 +20,7 @@ const socialLinks=[
     [<FaInstagram />, "https://www.instagram.com/gtechwebmarketing"],
     [<FaYoutube />, "https://www.youtube.com/@gtechwebmarketing"],
     [<FaLinkedin />, "https://www.linkedin.com/company/gtechwebmarketing/"],
-    [<FaXTwitter/>, "https://x.com/gtechweb123"],
-
-   
-   
-
-   
-    
+    [<FaXTwitter/>, "https://x.com/gtechweb123"], 
     
 ];
 
@@ -78,7 +72,6 @@ const FooterSection=() => {
 
                         {/* ABOUT */}
                          <div>
-
                             <p className="text-white/60 leading-8 text-xl font-light">
                               {/* <img src="./assets/white logo (2).png" alt="logo" className='h-25 mb-6'/> */}
                               G Tech is a leading web marketing agency setting growth marks in the world of communication. With the time and requirements, we have opted different level of strategic skills to help our clients & brands to optimize their engagements and value their efforts with minimum ROI.
@@ -102,12 +95,12 @@ const FooterSection=() => {
 
                         {/* MENU */}
 
-                        <div className="space-y-5">
+                        <div className="space-y-5 text-center">
                             <p className="text-xl uppercase tracking-[3px] text-white/40 mb-4">
                                 Quick Links
                             </p>
                             {footerLinks.map(([title, link], index) => (
-                                <motion.div
+                                <motion.div 
                                     key={index}
                                     whileHover={{ x: 10 }}
                                 >
