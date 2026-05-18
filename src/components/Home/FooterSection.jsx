@@ -113,7 +113,7 @@ const FooterSection=() => {
                                 >
                                     <Link
                                         to={link}
-                                        className="block text-xl text-[#f2f2f2] font-extralight transition-all duration-300"
+                                        className="block text-xl text-white/60 font-extralight transition-all duration-300"
                                     >
                                         {title}
                                     </Link>
@@ -131,15 +131,15 @@ const FooterSection=() => {
                                 Contact Information
                             </p>
 
-                         <p className="text-xl font-light text-white/90 inline-flex gap-1 items-center">
+                         <p className="text-xl font-light text-white/60 inline-flex gap-1 items-center">
                          <FaPhoneVolume size={19} />  +91-9810699052
                             </p>
 
-                            <p className="text-xl font-light text-white/90  inline-flex gap-2">
+                            <p className="text-xl font-light text-white/60  inline-flex gap-2">
                            <Mail size={23} />info@gtechwebmarketing.com
                             </p>
 
-                            <p className="text-xl font-light text-white/90 inline-flex gap-2">
+                            <p className="text-xl font-light text-white/60 inline-flex gap-2">
                            <MapPinHouse size={47} />
                                A - 19A, 3rd Floor, Mayapuri Industrial Area, Phase - II, New Delhi 110064, INDIA
                             </p>
