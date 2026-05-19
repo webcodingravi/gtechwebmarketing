@@ -384,6 +384,39 @@ const About=() => {
 
             </section> */}
 
+     
+{/* CERTIFICATIONS SECTION */}
+<section className="px-5 md:px-16 lg:px-28 xl:px-40 py-24 bg-[#f7f7f7]">
+  <div className="text-center mb-16">
+    <p className="uppercase tracking-[0.3em] text-sm text-slate-500">
+      Our Certifications
+    </p>
+    <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+      ISEM Certifications
+    </h2>
+  </div>
+
+  <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    {[
+      "assets/about/certification/1.jpg",
+      "assets/about/certification/2.jpg",
+      "assets/about/certification/cerfi1.jpg",
+    
+    ].map((src, i) => (
+      <div
+        key={i}
+        className="flex items-center justify-center rounded-3xl hover:scale-105 transition-transform duration-300 cursor-pointer border border-slate-200 bg-white p-6 shadow-sm"
+      >
+        <img
+          src={src}
+          alt="Certification"
+          className=" w-auto object-contain"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
         </div>
     );
 };
