@@ -10,7 +10,7 @@ const focusAreas=[
     },
     {
         number: "02",
-        title: "AI-Driven Marketing Automation & Consumer Engagement",
+        title: "Automated Marketing with AI & Consumer Engagement",
         description:
             "We use AI to automate marketing, personalize interactions, and improve conversions through smart workflows and real-time insights.",
     },
