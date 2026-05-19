@@ -47,7 +47,7 @@ const OfferingDetail=() => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
                     {/* content */}
-                    <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-6 pb-16 lg:px-8">
+                    <div className="relative z-10 mx-auto flex h-full  items-end px-6 pb-16 lg:px-[45px]">
 
                         <motion.div
                             initial={{ opacity: 0, y: 60 }}

@@ -22,9 +22,9 @@ const OfferingsSection=() => {
         >
 
           {/* BIG TITLE */}
-          <p className="text-2xl md:text-5xl font-semibold text-purple-400 tracking-wide mb-2">
+          <h2 className="text-2xl md:text-5xl font-semibold text-rose-400 tracking-wide mb-2 heading">
             Our Offerings
-          </p>
+          </h2>
           <p className="mt-3 text-gray-400 text-lg md:text-md max-w-2xl mx-auto">
             We combine strategy, technology and automation to build scalable digital ecosystems that drive real business outcomes.
           </p>

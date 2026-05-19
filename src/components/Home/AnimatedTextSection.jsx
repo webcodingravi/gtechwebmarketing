@@ -64,12 +64,12 @@ export default function InfiniteAnimatedText() {
                 "
       >
 
-        <span className="block opacity-90">
+        <span className="block opacity-90 heading ">
           Empowering
         </span>
 
         <motion.span
-          className="block text-purple-400"
+          className="block text-purple-400 heading"
           animate={{
             letterSpacing: ["0em", "0.05em", "0em"],
             scale: [1, 1.03, 1],

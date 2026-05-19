@@ -46,9 +46,9 @@ const FocusArea=() => {
             >
 
 
-                <p className="text-2xl font-semibold text-purple-400 tracking-wide md:text-5xl">
-                    Our Focus Areas
-                </p>
+                <h2 className="text-2xl font-semibold text-rose-400 tracking-wide md:text-5xl heading">
+                    Our focus Areas
+                </h2>
 
 
 
