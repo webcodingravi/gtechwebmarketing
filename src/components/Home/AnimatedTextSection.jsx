@@ -52,8 +52,9 @@ export default function InfiniteAnimatedText() {
         }}
         className="
                     text-center
-                    text-5xl
-                    md:text-8xl
+                    text-3xl
+                    md:text-6xl
+                    lg:text-8xl
                     font-semibold
                     leading-[1]
                     tracking-tight

@@ -282,7 +282,7 @@ const About=() => {
                                 <img
                                     src={client.logo}
                                     alt="client"
-                                    className="h-20 object-contain grayscale hover:grayscale-0 transition"
+                                    className="h-20 object-contain grayscale hover:grayscale-0 transition cursor-pointer hover:scale-120 duration-300 w-[140px] object-center"
                                 />
 
                             </div>
@@ -313,7 +313,7 @@ const About=() => {
             </section>
 
             {/* LEADERSHIP */}
-            <section className="px-5 md:px-16 lg:px-28 xl:px-40 py-24">
+            {/* <section className="px-5 md:px-16 lg:px-28 xl:px-40 py-24">
 
                 <div className="mb-16">
 
@@ -382,7 +382,7 @@ const About=() => {
 
                 </div>
 
-            </section>
+            </section> */}
 
         </div>
     );
