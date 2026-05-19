@@ -41,11 +41,11 @@ const WorkDetail=() => {
                             {project.category}
                         </p>
 
-                        <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-semibold leading-tight heading">
                             {project.title}
                         </h1>
 
-                        <p className="mt-6 text-white/70 text-lg max-w-2xl mx-auto">
+                        <p className="mt-2 text-white/70 text-lg max-w-2xl mx-auto">
                             {project.intro}
                         </p>
 
@@ -59,7 +59,7 @@ const WorkDetail=() => {
             <section className="py-28">
                 <div className="max-w-5xl mx-auto px-6 text-center">
 
-                    <p className=" text-purple-400 text-[28px] mb-6 capitalize">
+                    <p className=" text-purple-400 text-[28px] mb-6 capitalize heading">
                         Overview
                     </p>
 

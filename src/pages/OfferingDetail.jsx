@@ -47,24 +47,24 @@ const OfferingDetail=() => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
                     {/* content */}
-                    <div className="relative z-10 mx-auto flex h-full  items-end px-6 pb-16 lg:px-[45px]">
+                    <div className="relative z-10 mx-auto flex h-full items-center justify-center px-6 pb-16 md:px-[45px]">
 
                         <motion.div
                             initial={{ opacity: 0, y: 60 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.9 }}
-                            className="max-w-4xl"
+                            className="md:px-52  text-center md:text-center"
                         >
                             <p className="mb-4 text-sm uppercase tracking-[0.35em] text-white/70">
                                 {service.category}
                             </p>
 
-                            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
+                            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl heading">
                                 {service.title}
                             </h1>
 
-                            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-                                {service.description}
+                            <p className="mt-4 max-w-2xl text-lg leading-8 text-white/80">
+                                {service.overview}
                             </p>
                         </motion.div>
 
@@ -75,14 +75,14 @@ const OfferingDetail=() => {
                 <section className="border-b border-slate-200 py-24">
                     <div className="md:px-52 grid  gap-16 px-6 lg:grid-cols-2 ">
                         <div>
-                            <p className="text-sm uppercase tracking-[0.35em] text-slate-500">
+                            <p className="text-lg uppercase text-slate-500 heading">
                                 Overview
                             </p>
 
-                            <h2 className="mt-6 text-4xl font-semibold leading-tight">
+                            <p className="mt-6 text-4xl font-semibold leading-tight">
                                 Creating connected customer experiences through strategy,
                                 technology and design.
-                            </h2>
+                            </p>
                         </div>
 
                         <div>
