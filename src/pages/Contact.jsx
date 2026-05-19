@@ -56,56 +56,55 @@ export default function Contact() {
                         {/* CONTACT INFO */}
                         <div className="mt-12 space-y-5">
 
-                            <div className="flex items-center gap-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-200">
-                                    <Mail size={18} />
-                                </div>
+    {/* Email */}
+    <div className="flex items-center gap-4">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-200">
+            <Mail size={18} />
+        </div>
 
-                                <div>
-                                    <p className="text-sm text-slate-500">
-                                        Email
-                                    </p>
+        <div className="flex-1 min-w-0">
+            <p className="text-sm text-slate-500">
+                Email
+            </p>
+            <p className="font-medium truncate sm:truncate-none">
+                info@gtechwebmarketing.com
+            </p>
+        </div>
+    </div>
 
-                                    <p className="font-medium">
-                                        info@gtechwebmarketing.com
-                                    </p>
-                                </div>
-                            </div>
+    {/* Phone */}
+    <div className="flex items-center gap-4">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-200">
+            <Phone size={18} />
+        </div>
 
-                            <div className="flex items-center gap-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-200">
-                                    <Phone size={18} />
-                                </div>
+        <div className="flex-1 min-w-0">
+            <p className="text-sm text-slate-500">
+                Phone
+            </p>
+            <p className="font-medium">
+                +91-9810699052
+            </p>
+        </div>
+    </div>
 
-                                <div>
-                                    <p className="text-sm text-slate-500">
-                                        Phone
-                                    </p>
+    {/* Address */}
+    <div className="flex items-start gap-4">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-200 mt-1">
+            <MapPinHouse size={18} />
+        </div>
 
-                                    <p className="font-medium">
-                                        +91-9810699052
-                                    </p>
-                                </div>
-                            </div>
+        <div className="flex-1 min-w-0">
+            <p className="text-sm text-slate-500">
+                Address
+            </p>
+            <p className="font-medium break-words">
+                A - 19A, 3rd Floor, Mayapuri Industrial Area, Phase - II, New Delhi 110064, INDIA
+            </p>
+        </div>
+    </div>
 
-                            <div className="flex items-center gap-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-200">
-                                    <MapPinHouse size={18} />
-                                </div>
-
-                                <div>
-                                    <p className="text-sm text-slate-500">
-                                        Address
-                                    </p>
-
-                                    <p className="font-medium">
-                                        A - 19A, 3rd Floor, Mayapuri Industrial Area, Phase - II, New Delhi 110064, INDIA
-                                    </p>
-                                </div>
-                            </div>
-
-
-                        </div>
+</div>
 
                     </div>
 
