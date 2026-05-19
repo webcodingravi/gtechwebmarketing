@@ -405,12 +405,12 @@ const About=() => {
     ].map((src, i) => (
       <div
         key={i}
-        className="flex items-center justify-center rounded-3xl hover:scale-105 transition-transform duration-300 cursor-pointer border border-slate-200 bg-white p-6 shadow-sm"
+        className="flex items-center min-h-[500px] justify-center rounded-3xl hover:scale-105 transition-transform duration-300 cursor-pointer border border-slate-200 bg-white p-6 shadow-sm"
       >
         <img
           src={src}
           alt="Certification"
-          className=" w-auto object-contain"
+          className=" w-auto object-cover min-h-[500px] object-center"
         />
       </div>
     ))}
