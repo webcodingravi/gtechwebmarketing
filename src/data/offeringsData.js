@@ -2,8 +2,8 @@ export const offeringData=[
     {
         number: "01",
         id: 1,
-        slug: "digitalforretail",
-        title: "Digital For Retail",
+        slug: "digital-commerce",
+        title: "Digital Commerce",
         category: "Retail Experience",
 
         heroImage:
@@ -60,8 +60,8 @@ export const offeringData=[
     {
         number: "02",
         id: 2,
-        slug: "branding",
-        title: "Branding",
+        slug: "creative-branding",
+        title: "Creative Branding",
         category: "Creative Strategy",
 
         heroImage:
@@ -118,8 +118,8 @@ export const offeringData=[
     {
         number: "03",
         id: 3,
-        slug: "marketingautomation",
-        title: "Marketing Automation",
+        slug: "marketing-intelligence",
+        title: "Marketing Intelligence",
         category: "Automation & Engagement",
 
         heroImage:
