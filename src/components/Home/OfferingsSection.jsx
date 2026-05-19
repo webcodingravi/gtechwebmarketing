@@ -85,7 +85,7 @@ const OfferingsSection=() => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="relative z-10 mt-6 text-xl md:text-2xl font-semibold text-white group-hover:text-purple-400 transition">
+                <h3 className="relative z-10 mt-6 text-xl md:text-2xl font-semibold text-white group-hover:text-purple-400 transition ">
                   {item.title}
                 </h3>
 
